@@ -33,6 +33,12 @@ function getCategoryDiscount(category) {
     }
 }
 
+function priceAfterCategoryDiscount(product) { 
+    rate = getCategoryDiscount(product.category)
+    return product.price * (1 - rate); 
+}  
+
+
 
 
 
