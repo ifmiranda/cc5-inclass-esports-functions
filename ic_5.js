@@ -31,20 +31,17 @@ function catDiscount(category) {
         default:
             return 0;
     }
-}
+}; 
 
 function priceAfterCategoryDiscount(product) { 
     rate = getCategoryDiscount(product.category)
     return product.price * (1 - rate); 
 }   
 function findProductById(id) {
-    return products.find(product => product.id === id);
-} 
-
-
-
-
-
-
-
-
+    for (const product of products) { 
+        if (product.id === id) { 
+            return product; 
+        }
+    }
+    return null;
+}
