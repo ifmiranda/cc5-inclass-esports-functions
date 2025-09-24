@@ -15,5 +15,16 @@ const cart = [
     {productID: 304, qty: 3}, 
     {productID: 305, qty: 4}, 
 ]; 
-// Membership status - "member", "non-member", "guest" 
+// Membership status - "regular", "student", "member", "vip"  
 const getCategoryDiscount = "member"; 
+
+// Example function to list products in the cart
+function productsInCart(cart, products) {
+    return cart.map(item => {
+        const product = products.find(p => p.id === item.productID);
+        return {
+            ...product,
+            qty: item.qty
+        };
+    });
+}
