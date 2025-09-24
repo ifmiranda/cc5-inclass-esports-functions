@@ -18,7 +18,7 @@ const cart = [
 // Membership status - "regular", "student", "member", "vip"  
 const getCategoryDiscount = "member"; 
 
-function getCategoryDiscount(category) { 
+function catDiscount(category) { 
     switch(category) {
         case "gear":
             return 0.10;
@@ -36,9 +36,10 @@ function getCategoryDiscount(category) {
 function priceAfterCategoryDiscount(product) { 
     rate = getCategoryDiscount(product.category)
     return product.price * (1 - rate); 
-}  
-
-
+}   
+function findProductById(id) {
+    return products.find(product => product.id === id);
+} 
 
 
 
