@@ -15,4 +15,5 @@ const cart = [
     {productID: 304, qty: 3}, 
     {productID: 305, qty: 4}, 
 ]; 
-
+// Membership status - "member", "non-member", "guest" 
+const getCategoryDiscount = "member"; 
