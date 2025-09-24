@@ -18,13 +18,26 @@ const cart = [
 // Membership status - "regular", "student", "member", "vip"  
 const getCategoryDiscount = "member"; 
 
-// Example function to list products in the cart
-function productsInCart(cart, products) {
-    return cart.map(item => {
-        const product = products.find(p => p.id === item.productID);
-        return {
-            ...product,
-            qty: item.qty
-        };
-    });
+function getCategoryDiscount(category) { 
+    switch(category) {
+        case "gear":
+            return 0.10;
+        case "apparel":
+            return 0.15;
+        case "snacks":
+            return 0.05;
+        case "access":
+            return 0.12;
+        default:
+            return 0;
+    }
 }
+
+
+
+
+
+
+
+
+
